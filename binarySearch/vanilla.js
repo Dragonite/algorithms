@@ -17,6 +17,6 @@ const vanillaBinarySearch = (arr, target) => {
     return undefined;
 }
 
-const index = vanillaBinarySearch(input, 13);
+const index = vanillaBinarySearch(input, 12);
 
 console.log(index);
