@@ -4,7 +4,7 @@ const vanillaBinarySearch = (arr, target) => {
     // Initialise pointers to start and end.
     let left = 0;
     let right = arr.length - 1;
-    while (left !== right) {
+    while (left <= right) {
         const midPoint =  Math.floor((left + right) / 2);
         if (arr[midPoint] > target) {
             right = midPoint - 1;
@@ -14,9 +14,9 @@ const vanillaBinarySearch = (arr, target) => {
             return midPoint;
         }
     }
-    return arr[left] === target ? left : undefined;
+    return undefined;
 }
 
-const index = vanillaBinarySearch(input, 12);
+const index = vanillaBinarySearch(input, 13);
 
 console.log(index);
