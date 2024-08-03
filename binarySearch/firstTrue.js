@@ -17,6 +17,20 @@ const firstTrue = (arr) => {
     return boundaryIndex;
 }
 
-const index = firstTrue(input);
+const firstTrueWithoutRemoval = (arr) => {
+    let left = 0;
+    let right = arr.length - 1;
+    while (left !== right) {
+        const midPoint = Math.floor((left + right) / 2);
+        if (arr[midPoint]) {
+            // No need to do comparison here as you'll always get a smaller number for boundary index.
+            right = midPoint;
+        } else {
+            left = midPoint + 1;
+        }
+    }
+    return arr[left] ? left : -1;
+}
 
-console.log(index);
+console.log('With replacement:', firstTrue(input));
+console.log('Without replacement', firstTrueWithoutRemoval(input));
