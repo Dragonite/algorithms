@@ -16,7 +16,9 @@
     "url": "https://github.com/Dragonite/algorithms/issues"
   },
   "homepage": "https://github.com/Dragonite/algorithms#readme",
-  "dependencies": {
-    "eslint": "^9.8.0"
+  "devDependencies": {
+    "@eslint/js": "^9.8.0",
+    "eslint": "^9.8.0",
+    "globals": "^15.9.0"
   }
 }
