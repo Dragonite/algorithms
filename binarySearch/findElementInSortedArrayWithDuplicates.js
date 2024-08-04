@@ -1,6 +1,6 @@
 // Find element in sorted array with duplicates
 
-const firstInput = [[1, 3, 3, 3, 3, 6, 10, 10, 10, 100], 3];
+const firstInput = [[1, 3, 3, 10, 11, 12, 12, 12, 12, 100], 10];
 const secondInput = [[2, 3, 5, 7, 11, 13, 17, 19], 6];
 
 const findElementInSortedArrayWithDuplicates = (arr, target) => {
@@ -12,6 +12,8 @@ const findElementInSortedArrayWithDuplicates = (arr, target) => {
         if (arr[midPoint] === target) {
             // No need to do comparison here as you'll always get a smaller number for boundary index.
             boundaryIndex = midPoint;
+            right = midPoint - 1;
+        } else if (arr[midPoint] > target) {
             right = midPoint - 1;
         } else {
             left = midPoint + 1;
