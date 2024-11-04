@@ -1,6 +1,6 @@
 // Find minimum in rotated sorted array
 
-const valuesToTest = [[30, 40, 50, 10, 20], [3, 5, 7, 11, 13, 17, 19, 2], [10, 20, 30, 40]];
+const valuesToTest = [[30, 40, 50, 10, 20], [3, 5, 7, 11, 13, 17, 19, 2], [10, 20, 30, 40, 50, 60, 70]];
 
 const findMinimumInRotatedSortedArray = (arr) => {
     let left = 0;
