@@ -13,13 +13,18 @@ const numberOfOptions = (a, b, c, d, target) => {
     // This part is O(a*b)
     for (let i = 0; i < a.length; i++) {
         for (let j = 0; j < b.length; j++) {
-            ab.push(a[i] + b[j]);
+            // Overall goal is to have these arrays as short as possible, this will improve efficiency
+            if ((a[i] + b[j]) < target) {
+                ab.push(a[i] + b[j]);
+            }
         }
     }
     // This part is O(c*d)
     for (let i = 0; i < c.length; i++) {
         for (let j = 0; j < d.length; j++) {
-            cd.push(c[i] + d[j]);
+            if ((c[i] + d[j]) < target) {
+                cd.push(c[i] + d[j]);
+            }
         }
     }
     // The reason why we don't immediately do a binary search here and insert, is because finding the position then splicing the array
